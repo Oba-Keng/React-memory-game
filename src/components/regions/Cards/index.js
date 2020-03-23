@@ -15,16 +15,19 @@ const Board = props => {
           {showCards(0)}
           {showCards(1)}
           {showCards(2)}
+          {showCards(3)}
         </div>
         <div className={"border-row"}>
-          {showCards(3)}
           {showCards(4)}
           {showCards(5)}
-        </div>
-        <div className={"border-row"}>
           {showCards(6)}
           {showCards(7)}
+        </div>
+        <div className={"border-row"}>
           {showCards(8)}
+          {showCards(9)}
+          {showCards(10)}
+          {showCards(11)}
         </div>
       </div>
     </React.Fragment>
