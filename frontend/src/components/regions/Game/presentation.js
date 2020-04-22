@@ -6,10 +6,10 @@ const Game = props => {
   });
 
   return (
-    <div>
+    <button>
       {props.value} onClick={() => props.onClick(i)} />
-    </div>
+    </button>
   );
 };
 
-export default Board;
+export default Game;
