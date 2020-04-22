@@ -6,9 +6,10 @@ const Game = props => {
   });
 
   return (
-    <button>
-      {props.value} onClick={() => props.onClick(i)} />
-    </button>
+    <React.Fragment>
+      <h1 align="center">Memory-Game</h1>
+      <button>{props.cards} </button>
+    </React.Fragment>
   );
 };
 

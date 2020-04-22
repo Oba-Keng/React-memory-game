@@ -1,5 +1,5 @@
 import React from "react";
-import Game from "./components/regions/Cards/presentation";
+import Game from "./components/regions/Game/presentation";
 import "./App.css";
 
 function App() {
