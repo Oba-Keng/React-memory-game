@@ -1,12 +1,12 @@
-.cardBlock {
-  background-color: rgba(119, 40, 60, 0.979);
+.card {
+  background-color: rgba(40, 119, 73, 0.979);
   padding: 0;
   border: 1px solid grey;
   float: left;
   margin-top: -1px;
   margin-right: -1px;
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   text-align: center;
   font-size: 40px;
   font-weight: bold;
@@ -19,7 +19,7 @@
   display: table;
 }
 
-.cardBlock:focus {
+.card:focus {
   outline: none;
 }
 

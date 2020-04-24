@@ -1,16 +1,22 @@
 import React, { useState } from "react";
+import Board from "../Cards/index";
 
 const Game = props => {
   const [game, setGame] = useState({
-    cardclick: 0
+    cardclick: 0,
+    history: [{ cards: Array(30).fill(null) }]
   });
+
+  const history = game.history;
 
   return (
     <React.Fragment>
-      <h1 align="center">Memory-Game</h1>
-      <button>{props.cards} </button>
+      <div className="game">
+        <div className="">
+          <Board onClick={i => props.onClick(i)} cards={history} />
+        </div>
+      </div>
     </React.Fragment>
   );
 };
-
 export default Game;
