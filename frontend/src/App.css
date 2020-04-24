@@ -1,16 +1,88 @@
 .card {
-  background-color: rgba(40, 119, 73, 0.979);
+  background-color: white;
   padding: 0;
   border: 1px solid grey;
-  float: left;
-  margin-top: -1px;
   margin-right: -1px;
-  width: 100px;
-  height: 100px;
+  margin-top: -1px;
+  width: 90px;
+  height: 90px;
   text-align: center;
   font-size: 40px;
   font-weight: bold;
   line-height: 80px;
+  display: inline-block;
+  text-decoration: aqua;
+  color: white;
+  margin: 10px;
+  border: 1px solid gold;
+
+  background-image: linear-gradient(
+    bottom,
+    rgb(73, 132, 180) 0%,
+    rgb(97, 155, 203) 100%
+  );
+  background-image: -o-linear-gradient(
+    bottom,
+    rgb(73, 132, 180) 0%,
+    rgb(97, 155, 203) 100%
+  );
+  background-image: -moz-linear-gradient(
+    bottom,
+    rgb(73, 132, 180) 0%,
+    rgb(97, 155, 203) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    bottom,
+    rgb(73, 132, 180) 0%,
+    rgb(97, 155, 203) 100%
+  );
+
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, rgb(73, 132, 180)) color-stop(1, rgb(97, 155, 203))
+  );
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 6px 0px blue, 0px 3px 15px rgba(0, 0, 0, 0.4),
+    inset 0px 1px 0px rgba(255, 255, 124);
+  -moz-border-shadow: 0px 6px 0px blue, 0px 3px 15px rgba(0, 0, 0, 0.4),
+    inset 0px 1px 0px rgba(255, 255, 124);
+  box-shadow: 0px 6px 0px blue, 0px 3px 15px rgba(0, 0, 0, 0.4),
+    inset 0px 1px 0px rgba(255, 255, 124);
+}
+
+.card:active {
+  background-image: linear-gradient(
+    bottom,
+    rgb(88, 154, 204) 0%,
+    rgb(90, 150, 199) 100%
+  );
+  background-image: -o-linear-gradient(
+    bottom,
+    rgb(88, 154, 204) 0%,
+    rgb(90, 150, 199) 100%
+  );
+  background-image: -moz-linear-gradient(
+    bottom,
+    rgb(88, 154, 204) 0%,
+    rgb(90, 150, 199) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    bottom,
+    rgb(88, 154, 204) 0%,
+    rgb(90, 150, 199) 100%
+  );
+
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, rgb(88, 154, 204)) color-stop(1, rgb(90, 150, 199))
+  );
 }
 
 .border-row:after {
@@ -31,5 +103,4 @@
   display: flex;
   flex-direction: row;
   margin: 0 auto;
-  background: rgb(0, 140, 255);
 }
