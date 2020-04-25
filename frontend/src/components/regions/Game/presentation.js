@@ -7,13 +7,40 @@ const Game = props => {
     phase: [{ cards: Array(30).fill(null) }]
   });
 
+  const Timer = () => {
+    const [timer, setTimer] = useState({
+      minutes: 2,
+      seconds: 0
+    });
+
+    return (
+      <React.Fragment>
+        <div>
+          <h1>Time-Elapsed: 2:00</h1>
+        </div>
+      </React.Fragment>
+    );
+  };
+
+  const clickHandler = props => {
+    const phase = game.phase.slice();
+    const current = phase[phase - 1];
+
+    // setGame({
+    //   phase: phase.concat({
+    //     cards: cards
+    //   })
+    // });
+  };
+
   const phase = game.phase;
 
   return (
     <React.Fragment>
+      <Timer />
       <div className="game">
         <div className="">
-          <Board onClick={i => props.onClick(i)} cards={phase} />
+          <Board onClick={i => clickHandler(i)} cards={phase} />
         </div>
       </div>
     </React.Fragment>

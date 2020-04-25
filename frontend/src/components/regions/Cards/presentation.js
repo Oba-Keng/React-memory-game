@@ -4,7 +4,7 @@ const Cards = props => {
   return (
     <React.Fragment>
       <button className="card" onClick={props.onClick}>
-        {props.card}
+        {props.cards}
       </button>
     </React.Fragment>
   );

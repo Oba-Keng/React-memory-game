@@ -1,11 +1,7 @@
 import React from "react";
 import Presentation from "./presentation";
-// import imageone from "./images/2C.jpg";
-// import imagetwo from "./images/2D.jpg";
 
 const Board = props => {
-  // const cards = [imageone, imagetwo];
-
   const showCards = i => {
     return (
       <Presentation value={props.cards[i]} onClick={() => props.onClick(i)} />
