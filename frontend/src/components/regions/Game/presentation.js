@@ -21,9 +21,14 @@ const Game = props => {
 
   const phase = game.phase;
 
+  const Restart = () => {
+    return <button className="start-button">Play Again</button>;
+  };
+
   return (
     <React.Fragment>
-      <Timer onChange={props.componentDidMount} />
+      <Restart />
+      <Timer />
       <div className="game">
         <div className="">
           <Board onClick={i => clickHandler(i)} cards={phase} />
