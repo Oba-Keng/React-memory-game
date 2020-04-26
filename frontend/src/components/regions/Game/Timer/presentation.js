@@ -8,11 +8,10 @@ const Timer = props => {
 
   const componentDidMount = () => {
     let myInterval = setInterval(() => {
-      if (timer.seconds > 0) {
+      if (timer.seconds > 0)
         setTimer(({ seconds }) => ({
           seconds: seconds - 1
         }));
-      }
       if (timer.seconds === 0) {
         if (timer.minutes === 0) {
           clearInterval(myInterval);
@@ -42,11 +41,12 @@ const Timer = props => {
 
       <div>
         {timer.minutes === 0 && timer.seconds === 0 ? (
-          <h1>Times Up!</h1>
+          <h1> Times Up!</h1>
         ) : (
           <h1>
-            Time Remaining: {timer.minutes}:
-            {timer.seconds < 10 ? `0${timer.seconds}` : timer.seconds}
+            Time Remaining:{" "}
+            {(timer.minutes = 0 ? timer.seconds : timer.minutes)}:
+            {timer.seconds < 59 ? `0${timer.seconds}` : timer.seconds}
           </h1>
         )}
       </div>
