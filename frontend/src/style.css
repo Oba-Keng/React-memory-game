@@ -1,5 +1,5 @@
 .card {
-  background-color: white;
+  background-color: silver;
   padding: 0;
   border: 1px solid grey;
   margin-right: -1px;
@@ -12,14 +12,14 @@
   line-height: 80px;
   display: inline-block;
   text-decoration: aqua;
-  color: white;
+  color: #ffffff;
   margin: 8.5px;
   border: 1px solid gold;
   background-image: linear-gradient(bottom, #4984b4 0%, #619bcb 100%);
-  background-image: o-linear-gradient(bottom, #4984b4 0%, #619bcb 100%);
-  background-image: moz-linear-gradient(bottom, #4984b4 0%, #619bcb 100%);
-  background-image: ms-linear-gradient(bottom, #4984b4 0%, #619bcb 100%);
-  background-image: webkit-gradient(linear, left bottom, left top, color-stop(0, #4984b4) color-stop(1, #619bcb));
+  background-image: -o-linear-gradient(bottom, #4984b4 0%, #619bcb 100%);
+  background-image: -moz-linear-gradient(bottom, #4984b4 0%, #619bcb 100%);
+  background-image: -ms-linear-gradient(bottom, #4984b4 0%, #619bcb 100%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #4984b4) color-stop(1, #619bcb));
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -88,8 +88,22 @@
   background-image: -webkit-linear-gradient(bottom, #589acc 0%, #5a96c7 100%);
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #589acc) color-stop(1, #5a96c7));
 }
+.border-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
 .card:focus {
   outline: none;
+}
+.game {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
 }
 .start-button {
   border: 1px solid #ffd000;

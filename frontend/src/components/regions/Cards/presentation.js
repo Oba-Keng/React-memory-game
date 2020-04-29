@@ -3,18 +3,22 @@ import React from "react";
 
 const Cards = props => {
   const Front = () => {
-    return <div className="card">{props.children}</div>;
+    return <button className="card">{props.children}</button>;
   };
 
   const Back = () => {
-    return <div className="card">{props.children}</div>;
+    return <button className="card">{props.children}</button>;
   };
 
   return (
-    <div>
-      <Front />
-      <Back />
-    </div>
+    <React.Fragment>
+      <div className={"card" + props.orientation}>
+        <div className={"flipper" + (props.flipped ? "flipped" : "")}>
+          <Front></Front>
+          <Back></Back>
+        </div>
+      </div>
+    </React.Fragment>
   );
 };
 

@@ -2,14 +2,8 @@ import React, { useState } from "react";
 import Board from "../Cards/index";
 import Timer from "./Timer/presentation";
 
-const Game = () => {
+const Game = props => {
   const [game, setGame] = useState({
-    cardclick: 0,
-    firstCard: null,
-    secondCard: null,
-    timer: null,
-    phase: [{ cards: Array(30).fill(null) }],
-    orientation: null,
     flipped: false
   });
 
@@ -17,22 +11,23 @@ const Game = () => {
     return <button className="start-button">Play Again</button>;
   };
 
-  // const [flipped, setFlipped] = useState(false);
-
   const flipCard = () => {
-    setGame({ flipped: game.flipped });
+    setGame({ flipped: !game.flipped });
   };
 
   return (
     <React.Fragment>
       <Restart />
       <Timer />
-      <Board
-        flipped={game.flipped}
-        onClick={flipCard}
-        orientation="horizontal"
-      />
-      <Board flipped={game.flipped} onClick={flipCard} orientation="vertical" />
+      <div className="game">
+        <div>
+          <Board
+            flipped={game.flipped}
+            onClick={flipCard}
+            orientation="horizontal"
+          />
+        </div>
+      </div>
     </React.Fragment>
   );
 

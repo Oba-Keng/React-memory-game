@@ -1,5 +1,5 @@
 .card {
-  background-color: white;
+  background-color: silver;
   padding: 0;
   border: 1px solid grey;
   margin-right: -1px;
@@ -12,7 +12,7 @@
   line-height: 80px;
   display: inline-block;
   text-decoration: aqua;
-  color: white;
+  color: rgb(255, 255, 255);
   margin: 8.5px;
   border: 1px solid gold;
 
@@ -21,22 +21,22 @@
     rgb(73, 132, 180) 0%,
     rgb(97, 155, 203) 100%
   );
-  background-image: o-linear-gradient(
+  background-image: -o-linear-gradient(
     bottom,
     rgb(73, 132, 180) 0%,
     rgb(97, 155, 203) 100%
   );
-  background-image: moz-linear-gradient(
+  background-image: -moz-linear-gradient(
     bottom,
     rgb(73, 132, 180) 0%,
     rgb(97, 155, 203) 100%
   );
-  background-image: ms-linear-gradient(
+  background-image: -ms-linear-gradient(
     bottom,
     rgb(73, 132, 180) 0%,
     rgb(97, 155, 203) 100%
   );
-  background-image: webkit-gradient(
+  background-image: -webkit-gradient(
     linear,
     left bottom,
     left top,
@@ -155,25 +155,25 @@
   );
 }
 
-// .border-row:after {
-//   clear: both;
-//   content: "";
-//   display: table;
-// }
+.border-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
 
 .card:focus {
   outline: none;
 }
 
-// .game {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   display: flex;
-//   flex-direction: row;
-//   margin: 0 auto;
-// }
+.game {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
 
 .start-button {
   border: 1px solid rgb(255, 208, 0);
