@@ -1,12 +1,21 @@
 import React from "react";
+// import Board from "./index";
 
 const Cards = props => {
+  const Front = () => {
+    return <div className="card">{props.children}</div>;
+  };
+
+  const Back = () => {
+    return <div className="card">{props.children}</div>;
+  };
+
   return (
-    <React.Fragment>
-      <button className="card" onClick={props.onClick}>
-        {props.value}
-      </button>
-    </React.Fragment>
+    <div>
+      <Front />
+      <Back />
+    </div>
   );
 };
+
 export default Cards;

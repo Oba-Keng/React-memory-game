@@ -1,0 +1,116 @@
+.card {
+  background-color: white;
+  padding: 0;
+  border: 1px solid grey;
+  margin-right: -1px;
+  margin-top: -1px;
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 80px;
+  display: inline-block;
+  text-decoration: aqua;
+  color: white;
+  margin: 8.5px;
+  border: 1px solid gold;
+  background-image: linear-gradient(bottom, #4984b4 0%, #619bcb 100%);
+  background-image: o-linear-gradient(bottom, #4984b4 0%, #619bcb 100%);
+  background-image: moz-linear-gradient(bottom, #4984b4 0%, #619bcb 100%);
+  background-image: ms-linear-gradient(bottom, #4984b4 0%, #619bcb 100%);
+  background-image: webkit-gradient(linear, left bottom, left top, color-stop(0, #4984b4) color-stop(1, #619bcb));
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 6px 0px blue, 0px 3px 15px rgba(0, 0, 0, 0.4), inset 0px 1px 0px rgba(255, 255, 124);
+  -moz-border-shadow: 0px 6px 0px blue, 0px 3px 15px rgba(0, 0, 0, 0.4), inset 0px 1px 0px rgba(255, 255, 124);
+  box-shadow: 0px 6px 0px blue, 0px 3px 15px rgba(0, 0, 0, 0.4), inset 0px 1px 0px rgba(255, 255, 124);
+}
+.card > div.flipper {
+  float: left;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+}
+.card > div.flipper .front,
+.card > div.flipper .back {
+  float: left;
+  display: block;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-style: preserve-3d;
+  transition: -webkit-transform ease 500ms;
+  transition: transform ease 500ms;
+}
+.card > div.flipper .front {
+  z-index: 2;
+  background: #19489e;
+}
+.card > div.flipper .back {
+  background: #9e1919;
+  /* back tile styles go here! */
+}
+.card.horizontal .front {
+  transform: rotateY(0deg);
+}
+.card.horizontal .back {
+  transform: rotateY(-180deg);
+}
+.card.horizontal div.flipper.flipped .front {
+  transform: rotateY(180deg);
+}
+.card.horizontal div.flipper.flipped .back {
+  transform: rotateY(0deg);
+}
+.card.vertical .front {
+  transform: rotateX(0deg);
+}
+.card.vertical .back {
+  transform: rotateX(-180deg);
+}
+.card.vertical div.flipper.flipped .front {
+  transform: rotateX(180deg);
+}
+.card.vertical div.flipper.flipped .back {
+  transform: rotateX(0deg);
+}
+.card:active {
+  background-image: linear-gradient(bottom, #589acc 0%, #5a96c7 100%);
+  background-image: -o-linear-gradient(bottom, #589acc 0%, #5a96c7 100%);
+  background-image: -moz-linear-gradient(bottom, #589acc 0%, #5a96c7 100%);
+  background-image: -webkit-linear-gradient(bottom, #589acc 0%, #5a96c7 100%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #589acc) color-stop(1, #5a96c7));
+}
+.card:focus {
+  outline: none;
+}
+.start-button {
+  border: 1px solid #ffd000;
+  margin-top: 20px;
+  margin-left: 5px;
+  background: #5eff00;
+  width: 100px;
+  color: #ff3c00;
+  background-image: linear-gradient(bottom, #b449af 0%, #c9cb61 100%);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 6px 0px #c8ff00, 0px 3px 15px rgba(0, 0, 0, 0.4), inset 0px 1px 0px #acff7c;
+  -moz-border-shadow: 0px 6px 0px #b3ff00, 0px 3px 15px rgba(0, 0, 0, 0.4), inset 0px 1px 0px rgba(255, 255, 124);
+  box-shadow: 0px 6px 0px #00ff00, 0px 3px 15px rgba(0, 0, 0, 0.4), inset 0px 1px 0px rgba(255, 255, 124);
+}
+.start-button:active {
+  background-image: linear-gradient(bottom, #589acc 0%, #5a96c7 100%);
+  background-image: -o-linear-gradient(bottom, #589acc 0%, #5a96c7 100%);
+  background-image: -moz-linear-gradient(bottom, #589acc 0%, #5a96c7 100%);
+  background-image: -webkit-linear-gradient(bottom, #589acc 0%, #5a96c7 100%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #589acc) color-stop(1, #5a96c7));
+}
