@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 // import Board from "./index";
 
 const Cards = props => {
   const Front = () => {
-    return <button className="card">{props.children}</button>;
+    return (
+      <div className="card horizontal">
+        <div className="flipper">
+          <div className="front tile">{props.children}</div>
+        </div>
+      </div>
+    );
   };
 
   const Back = () => {
-    return <button className="card">{props.children}</button>;
+    return (
+      <div className="card horizontal">
+        <div className="flipper flipped">
+          <div className="back tile">{props.children}</div>
+        </div>
+      </div>
+    );
   };
 
   return (

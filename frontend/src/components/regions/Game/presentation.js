@@ -7,27 +7,22 @@ const Game = props => {
     flipped: false
   });
 
-  const Restart = () => {
-    return <button className="start-button">Play Again</button>;
-  };
-
   const flipCard = () => {
     setGame({ flipped: !game.flipped });
+  };
+  const Restart = () => {
+    return <button className="start-button">Play Again</button>;
   };
 
   return (
     <React.Fragment>
       <Restart />
       <Timer />
-      <div className="game">
-        <div>
-          <Board
-            flipped={game.flipped}
-            onClick={flipCard}
-            orientation="horizontal"
-          />
-        </div>
-      </div>
+      <Board
+        flipped={game.flipped}
+        onClick={flipCard}
+        orientation="horizontal"
+      />
     </React.Fragment>
   );
 

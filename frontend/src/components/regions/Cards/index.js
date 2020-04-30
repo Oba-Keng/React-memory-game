@@ -1,10 +1,9 @@
 import React from "react";
-import Presentation from "./presentation";
 import Cards from "./presentation";
 
 const Board = props => {
-  const showCards = i => {
-    return <Cards onClick={() => props.onClick(i)} />;
+  const showCards = () => {
+    return <Cards />;
   };
 
   return (
@@ -14,9 +13,8 @@ const Board = props => {
           {showCards(0)}
           {showCards(1)}
           {showCards(2)}
-          {showCards(3)}
-          {showCards(4)}
         </div>
+
         {/* <div className={"border-row"}>
           {showCards(5)}
           {showCards(6)}
@@ -58,3 +56,14 @@ const Board = props => {
 };
 
 export default Board;
+
+// React
+// JavaScript
+// HTML
+// CSS(less Css as well)
+// SQL
+// Python
+// Node.js
+// MongoDB
+// Docker
+// Express.js
