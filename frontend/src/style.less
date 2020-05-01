@@ -20,15 +20,15 @@
     transform-style: preserve-3d;
     cursor: pointer;
 
-    & :hover {
-      transform: rotateY(180deg);
-    }
-
     .back {
+      transform: rotateY(180deg);
+
       background: red;
     }
 
     .front {
+      z-index: 2;
+
       background: #19489e;
     }
 
@@ -79,9 +79,27 @@
 
       position: absolute;
 
-      transform-style: preserve-3d;
-      transition: -webkit-transform ease 500ms;
-      transition: transform ease 500ms;
+      // transform-style: preserve-3d;
+      // transition: -webkit-transform ease 500ms;
+      // transition: transform ease 500ms;
+    }
+  }
+}
+
+.flipper-container.horizontal {
+  .front {
+    transform: rotateY(0deg);
+  }
+  .back {
+    transform: rotateY(-180deg);
+  }
+
+  div.flipper.flipped {
+    .front {
+      transform: rotateY(180deg);
+    }
+    .back {
+      transform: rotateY(0deg);
     }
   }
 }

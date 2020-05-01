@@ -29,13 +29,12 @@
   -moz-border-shadow: 0px 6px 0px blue, 0px 3px 15px rgba(0, 0, 0, 0.4), inset 0px 1px 0px rgba(255, 255, 124);
   box-shadow: 0px 6px 0px blue, 0px 3px 15px rgba(0, 0, 0, 0.4), inset 0px 1px 0px rgba(255, 255, 124);
 }
-.flipper-container > div.flipper :hover {
-  transform: rotateY(180deg);
-}
 .flipper-container > div.flipper .back {
+  transform: rotateY(180deg);
   background: red;
 }
 .flipper-container > div.flipper .front {
+  z-index: 2;
   background: #19489e;
 }
 .flipper-container > div.flipper .front,
@@ -45,9 +44,18 @@
   height: 100%;
   backface-visibility: hidden;
   position: absolute;
-  transform-style: preserve-3d;
-  transition: -webkit-transform ease 500ms;
-  transition: transform ease 500ms;
+}
+.flipper-container.horizontal .front {
+  transform: rotateY(0deg);
+}
+.flipper-container.horizontal .back {
+  transform: rotateY(-180deg);
+}
+.flipper-container.horizontal div.flipper.flipped .front {
+  transform: rotateY(180deg);
+}
+.flipper-container.horizontal div.flipper.flipped .back {
+  transform: rotateY(0deg);
 }
 .flipper:active {
   background-image: linear-gradient(bottom, #589acc 0%, #5a96c7 100%);

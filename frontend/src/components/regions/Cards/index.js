@@ -3,13 +3,7 @@ import Cards from "./presentation";
 
 const Board = props => {
   const showCards = () => {
-    return (
-      // <div className={"flipper-container" + props.orientation}>
-      //   <div className={"flipper" + (props.flipped ? "flipped" : "")}>
-      <Cards />
-      //   </div>
-      // </div>
-    );
+    return <Cards />;
   };
 
   return (
