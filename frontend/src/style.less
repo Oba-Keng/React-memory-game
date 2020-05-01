@@ -1,7 +1,6 @@
 .flipper-container {
   float: left;
-  margin-right: -1px;
-  margin-top: -1px;
+
   width: 90px;
   height: 90px;
   color: silver;
@@ -10,14 +9,11 @@
 
   display: block;
 
-  span {
-    color: white;
-  }
-
   > div.flipper {
     float: left;
     width: 100%;
     height: 100%;
+
     position: relative;
     border: 1px solid gold;
     transition: all 0.6 ease;
@@ -29,12 +25,11 @@
     }
 
     .back {
-      transform: rotateY(180deg);
-      background: #19489e;
+      background: red;
     }
 
     .front {
-      background: red;
+      background: #19489e;
     }
 
     background-image: linear-gradient(
@@ -90,42 +85,6 @@
     }
   }
 }
-
-// .flipper-container.horizontal {
-//   .front {
-//     transform: rotateY(0deg);
-//   }
-//   .back {
-//     transform: rotateY(-180deg);
-//   }
-
-//   div.flipper.flipped {
-//     .front {
-//       transform: rotateY(-180deg);
-//     }
-//     .back {
-//       transform: rotateY(0deg);
-//     }
-//   }
-// }
-
-// .flipper-container.vertical {
-//   .front {
-//     transform: rotateX(0deg);
-//   }
-//   .back {
-//     transform: rotateX(-180deg);
-//   }
-
-//   div.flipper.flipped {
-//     .front {
-//       transform: rotateX(180deg);
-//     }
-//     .back {
-//       transform: rotateX(0deg);
-//     }
-//   }
-// }
 
 .flipper:active {
   background-image: linear-gradient(

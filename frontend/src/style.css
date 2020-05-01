@@ -1,16 +1,11 @@
 .flipper-container {
   float: left;
-  margin-right: -1px;
-  margin-top: -1px;
   width: 90px;
   height: 90px;
   color: silver;
   perspective: 700;
   margin: 5px;
   display: block;
-}
-.flipper-container span {
-  color: white;
 }
 .flipper-container > div.flipper {
   float: left;
@@ -38,11 +33,10 @@
   transform: rotateY(180deg);
 }
 .flipper-container > div.flipper .back {
-  transform: rotateY(180deg);
-  background: #19489e;
+  background: red;
 }
 .flipper-container > div.flipper .front {
-  background: red;
+  background: #19489e;
 }
 .flipper-container > div.flipper .front,
 .flipper-container > div.flipper .back {
