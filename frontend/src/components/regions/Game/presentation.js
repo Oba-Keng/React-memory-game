@@ -3,13 +3,13 @@ import Board from "../Cards/index";
 import Timer from "./Timer/presentation";
 
 const Game = props => {
-  const [game, setGame] = useState({
-    flipped: false
-  });
+  // const [game, setGame] = useState({
+  //   flipped: false
+  // });
 
-  const flipCard = () => {
-    setGame({ flipped: !game.flipped });
-  };
+  // const flipCard = () => {
+  //   setGame({ flipped: !game.flipped });
+  // };
   const Restart = () => {
     return <button className="start-button">Play Again</button>;
   };
@@ -19,9 +19,9 @@ const Game = props => {
       <Restart />
       <Timer />
       <Board
-        flipped={game.flipped}
-        onClick={flipCard}
-        orientation="horizontal"
+      // flipped={game.flipped}
+      // onClick={flipCard}
+      // orientation="horizontal"
       />
     </React.Fragment>
   );
