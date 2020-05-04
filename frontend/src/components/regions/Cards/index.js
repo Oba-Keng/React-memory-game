@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import Cards from "./presentation";
 
-const Board = props => {
-  const showCards = () => {
-    return <Cards />;
+const Board = () => {
+  const [game, setGame] = useState({
+    flipped: false
+  });
+
+  const flipCard = () => {
+    if (!game.flipped) {
+      setGame({
+        flipped: true
+      });
+    }
+  };
+  const showCards = i => {
+    return (
+      <Cards
+        flipped={game.flipped}
+        orientation="horizontal"
+        onClick={flipCard}
+      />
+    );
   };
 
   return (
