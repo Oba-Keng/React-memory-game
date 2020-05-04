@@ -12,6 +12,12 @@ const Board = () => {
         flipped: true
       });
     }
+
+    if (game.flipped) {
+      setGame({
+        flipped: false
+      });
+    }
   };
   const showCards = i => {
     return (

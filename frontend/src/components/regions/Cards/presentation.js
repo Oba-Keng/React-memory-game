@@ -3,17 +3,19 @@ import React from "react";
 const Cards = props => {
   const Front = () => {
     return (
-      <div onClick={props.onClick} className="front tile">
-        Front{props.child}
-      </div>
+      <img
+        onClick={props.onClick}
+        src="/images/robot.gif"
+        className="front tile"
+      />
     );
   };
 
   const Back = () => {
     return (
-      <div onClick={props.onClick} className="back tile">
+      <button onClick={props.onClick} className="back tile">
         Back{props.child}
-      </div>
+      </button>
     );
   };
 
