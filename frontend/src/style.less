@@ -8,11 +8,12 @@
 
   display: block;
 
-  > div.flipper {
+  > .flipper {
     float: left;
     width: 100%;
     height: 100%;
     perspective: 1000px;
+    transform: scale(1);
 
     position: relative;
     border: 1px solid gold;
@@ -94,7 +95,7 @@
     transform: rotateY(180deg);
   }
 
-  div.flipper.flipped {
+  .flipper.flipped {
     .front {
       transform: rotateY(180deg);
     }

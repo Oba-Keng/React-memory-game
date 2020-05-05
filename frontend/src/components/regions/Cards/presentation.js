@@ -1,7 +1,7 @@
 import React from "react";
 
 const Cards = props => {
-  const Front = () => {
+  const FlashTopFront = () => {
     return (
       <img
         onClick={props.onClick}
@@ -11,11 +11,53 @@ const Cards = props => {
     );
   };
 
-  const Back = () => {
+  const FlashTopBack = () => {
     return (
-      <button onClick={props.onClick} className="back tile">
-        Back{props.child}
-      </button>
+      <img
+        onClick={props.onClick}
+        src="/images/flash-top.gif"
+        className="back tile"
+      />
+    );
+  };
+
+  const BlueSmokeFront = () => {
+    return (
+      <img
+        onClick={props.onClick}
+        src="/images/robot.gif"
+        className="front tile"
+      />
+    );
+  };
+
+  const BlueSmokeBack = () => {
+    return (
+      <img
+        onClick={props.onClick}
+        src="/images/bluesmoke.gif"
+        className="back tile"
+      />
+    );
+  };
+
+  const GlobeFront = () => {
+    return (
+      <img
+        onClick={props.onClick}
+        src="/images/robot.gif"
+        className="front tile"
+      />
+    );
+  };
+
+  const GlobeBack = () => {
+    return (
+      <img
+        onClick={props.onClick}
+        src="/images/globe.gif"
+        className="back tile"
+      />
     );
   };
 
@@ -23,8 +65,20 @@ const Cards = props => {
     <React.Fragment>
       <div className={"flipper-container " + props.orientation}>
         <div className={"flipper" + (props.flipped ? " flipped" : "")}>
-          <Front></Front>
-          <Back></Back>
+          <FlashTopFront></FlashTopFront>
+          <FlashTopBack></FlashTopBack>
+        </div>
+      </div>
+      <div className={"flipper-container " + props.orientation}>
+        <div className={"flipper" + (props.flipped ? " flipped" : "")}>
+          <BlueSmokeFront></BlueSmokeFront>
+          <BlueSmokeBack></BlueSmokeBack>
+        </div>
+      </div>
+      <div className={"flipper-container " + props.orientation}>
+        <div className={"flipper" + (props.flipped ? " flipped" : "")}>
+          <GlobeFront></GlobeFront>
+          <GlobeBack></GlobeBack>
         </div>
       </div>
     </React.Fragment>
