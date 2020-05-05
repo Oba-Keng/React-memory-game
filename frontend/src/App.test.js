@@ -9,7 +9,7 @@ test("renders learn react link", () => {
 });
 
 test("create game", () => {
-  expect().toBeDefined();
+  expect(props.Game()).toBeDefined();
 });
 
 // test("return array", () => {
