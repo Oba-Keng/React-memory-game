@@ -32,9 +32,7 @@ const Board = () => {
   return (
     <React.Fragment>
       <div className="game">
-        <div className="border-row">
-          <div>{showCards()}</div>
-        </div>
+        <div>{showCards()}</div>
       </div>
     </React.Fragment>
   );
