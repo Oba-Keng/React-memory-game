@@ -19,7 +19,7 @@ const Board = () => {
       });
     }
   };
-  const showCards = i => {
+  const showCards = () => {
     return (
       <React.Fragment>
         <Cards
@@ -35,7 +35,7 @@ const Board = () => {
     <React.Fragment>
       <div className="game">
         <div className="border-row">
-          <div>{showCards(0)}</div>
+          <div>{showCards()}</div>
         </div>
       </div>
     </React.Fragment>

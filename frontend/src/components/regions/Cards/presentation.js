@@ -6,6 +6,7 @@ const Cards = props => {
       <img
         onClick={props.onClick}
         src="/images/robot.gif"
+        alt=""
         className="front tile"
       />
     );
@@ -16,6 +17,7 @@ const Cards = props => {
       <img
         onClick={props.onClick}
         src="/images/flash-top.gif"
+        alt=""
         className="back tile"
       />
     );
@@ -26,6 +28,7 @@ const Cards = props => {
       <img
         onClick={props.onClick}
         src="/images/robot.gif"
+        alt=""
         className="front tile"
       />
     );
@@ -36,6 +39,7 @@ const Cards = props => {
       <img
         onClick={props.onClick}
         src="/images/bluesmoke.gif"
+        alt=""
         className="back tile"
       />
     );
@@ -46,6 +50,7 @@ const Cards = props => {
       <img
         onClick={props.onClick}
         src="/images/robot.gif"
+        alt=""
         className="front tile"
       />
     );
@@ -56,6 +61,7 @@ const Cards = props => {
       <img
         onClick={props.onClick}
         src="/images/globe.gif"
+        alt=""
         className="back tile"
       />
     );
