@@ -1,9 +1,3 @@
-// * {
-//   margin: 0;
-//   padding: 0;
-//   box-sizing: border-box;
-// }
-
 .flipper-container {
   float: left;
 
@@ -100,6 +94,24 @@
   height: 100%;
 }
 
+.flipper-container.horizontal {
+  .front {
+    transform: rotateY(0deg);
+  }
+  .back {
+    transform: rotateY(180deg);
+  }
+
+  .flipper.flipped {
+    .front {
+      transform: rotateY(180deg);
+    }
+    .back {
+      transform: rotateY(0deg);
+    }
+  }
+}
+
 .flipper-container:active {
   transform: scale(0.97);
   transition: transform 0.5s;
@@ -131,24 +143,6 @@
     left top,
     color-stop(0, rgb(88, 154, 204)) color-stop(1, rgb(90, 150, 199))
   );
-}
-
-.flipper-container.horizontal {
-  .front {
-    transform: rotateY(180deg);
-  }
-  .back {
-    transform: rotateY(0deg);
-  }
-
-  div.flipper.flipped {
-    .front {
-      transform: rotateY(0deg);
-    }
-    .back {
-      transform: rotateY(180deg);
-    }
-  }
 }
 
 .border-row:after {

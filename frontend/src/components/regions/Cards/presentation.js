@@ -2,69 +2,27 @@ import React from "react";
 
 const Cards = props => {
   const FlashTopFront = () => {
-    return (
-      <img
-        onClick={props.onClick}
-        src="/images/robot.gif"
-        alt=""
-        className="front tile"
-      />
-    );
+    return <img src="/images/robot.gif" alt="" className="front tile" />;
   };
 
   const FlashTopBack = () => {
-    return (
-      <img
-        onClick={props.onClick}
-        src="/images/flash-top.gif"
-        alt=""
-        className="back tile"
-      />
-    );
+    return <img src="/images/flash-top.gif" alt="" className="back tile" />;
   };
 
   const BlueSmokeFront = () => {
-    return (
-      <img
-        onClick={props.onClick}
-        src="/images/robot.gif"
-        alt=""
-        className="front tile"
-      />
-    );
+    return <img src="/images/robot.gif" alt="" className="front tile" />;
   };
 
   const BlueSmokeBack = () => {
-    return (
-      <img
-        onClick={props.onClick}
-        src="/images/bluesmoke.gif"
-        alt=""
-        className="back tile"
-      />
-    );
+    return <img src="/images/bluesmoke.gif" alt="" className="back tile" />;
   };
 
   const GlobeFront = () => {
-    return (
-      <img
-        onClick={props.onClick}
-        src="/images/robot.gif"
-        alt=""
-        className="front tile"
-      />
-    );
+    return <img src="/images/robot.gif" alt="" className="front tile" />;
   };
 
   const GlobeBack = () => {
-    return (
-      <img
-        onClick={props.onClick}
-        src="/images/globe.gif"
-        alt=""
-        className="back tile"
-      />
-    );
+    return <img src="/images/globe.gif" alt="" className="back tile" />;
   };
 
   return (

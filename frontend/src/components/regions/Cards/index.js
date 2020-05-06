@@ -3,7 +3,7 @@ import Cards from "./presentation";
 
 const Board = () => {
   const [game, setGame] = useState({
-    flipped: false
+    flipped: Array(4).fill(false)
   });
 
   const flipCard = () => {
@@ -11,9 +11,7 @@ const Board = () => {
       setGame({
         flipped: true
       });
-    }
-
-    if (game.flipped) {
+    } else {
       setGame({
         flipped: false
       });
