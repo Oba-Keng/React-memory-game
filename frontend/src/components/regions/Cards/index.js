@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import Cards from "./presentation";
 
-const Board = () => {
+const Board = props => {
   const [game, setGame] = useState({
     flipped: Array(4).fill(false)
   });
 
   const flipCard = () => {
+    props.classlist.toggle("flipper");
     if (!game.flipped) {
       setGame({
         flipped: true
