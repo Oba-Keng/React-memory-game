@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Board from "../Cards/index";
 import Timer from "./Timer/presentation";
+import InitializeBoard from "../Board/index";
 
 const Game = props => {
+  const [cards, setCards] = useState([]);
+  const [game, setGame] = useState({
+    flipped: []
+  });
+
+  useEffect(() => {
+    setCards(InitializeBoard());
+  }, []);
+
+  const flipCard = id => {
+    setGame({
+      flipped: [id]
+    });
+  };
+
   const Restart = () => {
     return <button className="start-button">Play Again</button>;
   };
@@ -11,7 +27,7 @@ const Game = props => {
     <React.Fragment>
       <Restart />
       <Timer />
-      <Board />
+      <Board cards={cards} flipped={game.flipped} flipCard={flipCard} />
     </React.Fragment>
   );
 

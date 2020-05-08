@@ -5,50 +5,13 @@
   height: 90px;
   margin: 8.5px;
   color: grey;
-  transform: scale(1);
   position: relative;
   border: 1px solid gold;
-  transform-style: preserve-3d;
   cursor: pointer;
-  transition: transform 0.5s;
 
   display: block;
 
   perspective: 1000px;
-  transform: rotateY(180deg);
-
-  position: relative;
-  border: 1px solid gold;
-  transform-style: preserve-3d;
-  cursor: pointer;
-
-  .front,
-  .back {
-    float: left;
-    display: flex;
-    width: 100%;
-    height: 100%;
-
-    backface-visibility: hidden;
-
-    position: absolute;
-
-    transform-style: preserve-3d;
-    transition: -webkit-transform ease 500ms;
-    transition: transform ease 500ms;
-    transition: all 0.5s ease;
-  }
-
-  .back {
-    background: red;
-    transform: rotateY(180deg);
-  }
-
-  .front {
-    z-index: 2;
-
-    background: #19489e;
-  }
 
   background-image: linear-gradient(
     bottom,
@@ -88,61 +51,45 @@
     inset 0px 1px 0px rgba(255, 255, 124);
 }
 
-> .flipper {
+.flipper {
   float: left;
   width: 100%;
   height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
 }
 
-.flipper-container.horizontal {
-  .front {
-    transform: rotateY(0deg);
-  }
-  .back {
-    transform: rotateY(180deg);
-  }
+.front,
+.back {
+  float: left;
+  display: flex;
+  width: 100%;
+  height: 100%;
 
-  .flipper.flipped {
-    .front {
-      transform: rotateY(180deg);
-    }
-    .back {
-      transform: rotateY(0deg);
-    }
-  }
+  backface-visibility: hidden;
+
+  position: absolute;
+
+  transform-style: preserve-3d;
+  transition: -webkit-transform ease 500ms;
+  transition: transform ease 500ms;
+  transition: all 0.5s ease;
 }
 
-.flipper-container:active {
-  transform: scale(0.97);
-  transition: transform 0.5s;
+.back {
+  background: red;
+  transform: rotateY(0deg);
+  z-index: 2;
+}
 
-  background-image: linear-gradient(
-    bottom,
-    rgb(88, 154, 204) 0%,
-    rgb(90, 150, 199) 100%
-  );
-  background-image: -o-linear-gradient(
-    bottom,
-    rgb(88, 154, 204) 0%,
-    rgb(90, 150, 199) 100%
-  );
-  background-image: -moz-linear-gradient(
-    bottom,
-    rgb(88, 154, 204) 0%,
-    rgb(90, 150, 199) 100%
-  );
-  background-image: -webkit-linear-gradient(
-    bottom,
-    rgb(88, 154, 204) 0%,
-    rgb(90, 150, 199) 100%
-  );
+.front {
+  background: #19489e;
+  transform: rotateY(180deg);
+}
 
-  background-image: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    color-stop(0, rgb(88, 154, 204)) color-stop(1, rgb(90, 150, 199))
-  );
+.flipper-container.flipped .flipper {
+  transform: rotateY(180deg);
 }
 
 .border-row:after {

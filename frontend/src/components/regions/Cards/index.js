@@ -2,30 +2,20 @@ import React, { useState } from "react";
 import Cards from "./presentation";
 
 const Board = props => {
-  const [game, setGame] = useState({
-    flipped: Array(4).fill(false)
-  });
-
-  const flipCard = () => {
-    props.classlist.toggle("flipper");
-    if (!game.flipped) {
-      setGame({
-        flipped: true
-      });
-    } else {
-      setGame({
-        flipped: false
-      });
-    }
-  };
-  const showCards = () => {
+  const showCards = i => {
     return (
       <React.Fragment>
-        <Cards
-          flipped={game.flipped}
-          orientation="horizontal"
-          onClick={flipCard}
-        />
+        {props.cards.map(card => (
+          <Cards
+            key={card.id}
+            id={card.id}
+            type={card.type}
+            flipped={props.flipped.includes(card.id)}
+            flipCard={() => props.flipCard(card.id)}
+            front={"/images/slicedtriangle.gif"}
+            back={"/images/robot.gif"}
+          />
+        ))}
       </React.Fragment>
     );
   };

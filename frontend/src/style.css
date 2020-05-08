@@ -4,15 +4,11 @@
   height: 90px;
   margin: 8.5px;
   color: grey;
-  transform: scale(1);
-  transition: transform 0.5s;
-  display: block;
-  perspective: 1000px;
-  transform: rotateY(180deg);
   position: relative;
   border: 1px solid gold;
-  transform-style: preserve-3d;
   cursor: pointer;
+  display: block;
+  perspective: 1000px;
   background-image: linear-gradient(bottom, #4984b4 0%, #619bcb 100%);
   background-image: -o-linear-gradient(bottom, #4984b4 0%, #619bcb 100%);
   background-image: -moz-linear-gradient(bottom, #4984b4 0%, #619bcb 100%);
@@ -26,8 +22,16 @@
   -moz-border-shadow: 0px 6px 0px blue, 0px 3px 15px rgba(0, 0, 0, 0.4), inset 0px 1px 0px rgba(255, 255, 124);
   box-shadow: 0px 6px 0px blue, 0px 3px 15px rgba(0, 0, 0, 0.4), inset 0px 1px 0px rgba(255, 255, 124);
 }
-.flipper-container .front,
-.flipper-container .back {
+.flipper {
+  float: left;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.front,
+.back {
   float: left;
   display: flex;
   width: 100%;
@@ -39,39 +43,17 @@
   transition: transform ease 500ms;
   transition: all 0.5s ease;
 }
-.flipper-container .back {
+.back {
   background: red;
-  transform: rotateY(180deg);
-}
-.flipper-container .front {
+  transform: rotateY(0deg);
   z-index: 2;
+}
+.front {
   background: #19489e;
-}
- > .flipper {
-  float: left;
-  width: 100%;
-  height: 100%;
-}
-.flipper-container.horizontal .front {
-  transform: rotateY(0deg);
-}
-.flipper-container.horizontal .back {
   transform: rotateY(180deg);
 }
-.flipper-container.horizontal .flipper.flipped .front {
+.flipper-container.flipped .flipper {
   transform: rotateY(180deg);
-}
-.flipper-container.horizontal .flipper.flipped .back {
-  transform: rotateY(0deg);
-}
-.flipper-container:active {
-  transform: scale(0.97);
-  transition: transform 0.5s;
-  background-image: linear-gradient(bottom, #589acc 0%, #5a96c7 100%);
-  background-image: -o-linear-gradient(bottom, #589acc 0%, #5a96c7 100%);
-  background-image: -moz-linear-gradient(bottom, #589acc 0%, #5a96c7 100%);
-  background-image: -webkit-linear-gradient(bottom, #589acc 0%, #5a96c7 100%);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #589acc) color-stop(1, #5a96c7));
 }
 .border-row:after {
   clear: both;
