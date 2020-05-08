@@ -5,12 +5,10 @@ import InitializeBoard from "../Board/index";
 
 const Game = props => {
   const [cards, setCards] = useState([]);
-  const [game, setGame] = useState({
-    flipped: []
-  });
+  const [flipped, setFlipped] = useState([]);
   const [dimension, setDimension] = useState(400);
-  const [solved,setSolved] = useState([]);
-  const [disabled,setDisabled] = useState(false);
+  const [solved, setSolved] = useState([]);
+  const [disabled, setDisabled] = useState(false);
 
   useEffect(() => {
     resizeBoard();
@@ -24,9 +22,7 @@ const Game = props => {
   });
 
   const flipCard = id => {
-    setGame({
-      flipped: [id]
-    });
+    setFlipped([...flipped, id]);
   };
 
   const resizeBoard = () => {
@@ -49,7 +45,7 @@ const Game = props => {
       <Board
         dimension={dimension}
         cards={cards}
-        flipped={game.flipped}
+        flipped={flipped}
         flipCard={flipCard}
       />
     </React.Fragment>
