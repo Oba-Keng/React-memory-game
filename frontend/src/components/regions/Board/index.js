@@ -16,7 +16,23 @@ const ShuffleBoard = array => {
 const InitializeBoard = () => {
   let id = 0;
 
-  const cards = ["flash-top", "robot"].reduce((acc, type) => {
+  const cards = [
+    "flash-top",
+    "slicedtriangle",
+    "smiley",
+    "spiral",
+    "tulipninja",
+    "rotary",
+    "toothpaste",
+    "radius",
+    "rainbowegg",
+    "milkywayfog",
+    "bluesmoke",
+    "ampisand",
+    "discoball",
+    "globe",
+    "honeycomb"
+  ].reduce((acc, type) => {
     acc.push({
       id: id++,
       type

@@ -10,10 +10,9 @@ const Board = props => {
             key={card.id}
             id={card.id}
             type={card.type}
+            dimension={props.dimension}
             flipped={props.flipped.includes(card.id)}
             flipCard={() => props.flipCard(card.id)}
-            front={"/images/slicedtriangle.gif"}
-            back={"/images/robot.gif"}
           />
         ))}
       </React.Fragment>

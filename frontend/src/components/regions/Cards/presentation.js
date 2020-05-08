@@ -8,7 +8,9 @@ const Cards = props => {
     >
       <div className={"flipper"}>
         <img
-          src={props.flipped ? props.front : props.back}
+          src={
+            props.flipped ? `/images/${props.type}.gif` : "/images/robot.gif"
+          }
           alt=""
           className={props.flipped ? "front" : "back"}
         />

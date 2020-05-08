@@ -72,8 +72,8 @@
   flex-direction: row;
   margin: 0 auto;
 }
-.start-button {
-  border: 1px solid #ffd000;
+.timer {
+  border: 2px solid #ffd000;
   margin-top: 20px;
   margin-left: 5px;
   background: #5eff00;
@@ -88,7 +88,8 @@
   -moz-border-shadow: 0px 6px 0px #b3ff00, 0px 3px 15px rgba(0, 0, 0, 0.4), inset 0px 1px 0px rgba(255, 255, 124);
   box-shadow: 0px 6px 0px #00ff00, 0px 3px 15px rgba(0, 0, 0, 0.4), inset 0px 1px 0px rgba(255, 255, 124);
 }
-.start-button:active {
+.timer:active {
+  background-color: green;
   background-image: linear-gradient(bottom, #589acc 0%, #5a96c7 100%);
   background-image: -o-linear-gradient(bottom, #589acc 0%, #5a96c7 100%);
   background-image: -moz-linear-gradient(bottom, #589acc 0%, #5a96c7 100%);

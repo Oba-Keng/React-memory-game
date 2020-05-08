@@ -29,7 +29,7 @@ const Timer = () => {
   return (
     <React.Fragment>
       <button
-        className="start-button"
+        className="timer"
         // onClick={}
       >
         Start Game
