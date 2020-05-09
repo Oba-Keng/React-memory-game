@@ -28,12 +28,7 @@ const Timer = () => {
 
   return (
     <React.Fragment>
-      <button
-        className="timer"
-        // onClick={}
-      >
-        Start Game
-      </button>
+      <button className="timer">Start Game</button>
 
       <div>
         {minutes === 0 && seconds === 0 ? (
@@ -44,6 +39,10 @@ const Timer = () => {
           </h1>
         )}
       </div>
+      <h3 class="text">
+        Warning: not to be<br></br> used by person's who <br></br> are
+        photosensetive!
+      </h3>
     </React.Fragment>
   );
 };

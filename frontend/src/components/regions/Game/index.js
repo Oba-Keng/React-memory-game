@@ -17,8 +17,7 @@ const Game = props => {
 
   useEffect(() => {
     preloadImages();
-
-  },cards)
+  }, cards);
 
   useEffect(() => {
     const resizeListener = window.addEventListener("resize", resizeBoard);
@@ -45,11 +44,11 @@ const Game = props => {
   };
 
   const preloadImages = () => {
-    cards.map((card) => {
+    cards.map(card => {
       const src = `/images/${card.type}.gif`;
-      new Image().src = src
-    })
-  }
+      new Image().src = src;
+    });
+  };
 
   const resetCards = () => {
     setFlipped([]);
