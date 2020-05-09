@@ -3,10 +3,10 @@
   width: 90px;
   height: 90px;
   margin: 8.5px;
-  color: grey;
   position: relative;
   border: 1px solid gold;
   cursor: pointer;
+  background: black;
   display: block;
   perspective: 1000px;
   background-image: linear-gradient(bottom, #4984b4 0%, #619bcb 100%);

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Cards from "./presentation";
 
 const Board = props => {
@@ -12,7 +12,9 @@ const Board = props => {
             type={card.type}
             dimension={props.dimension}
             flipped={props.flipped.includes(card.id)}
-            flipCard={() => props.flipCard(card.id)}
+            flipCard={props.flipCard}
+            solved={props.solved.includes(card.id)}
+            disabled={props.disabled || props.solved.includes(card.id)}
           />
         ))}
       </React.Fragment>

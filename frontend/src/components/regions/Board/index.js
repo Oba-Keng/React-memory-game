@@ -1,5 +1,3 @@
-import React from "react";
-
 const ShuffleBoard = array => {
   const _array = array.slice(0);
 
