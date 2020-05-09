@@ -26,6 +26,9 @@ const Timer = () => {
     };
   });
 
+  if (minutes > 1) {
+  }
+
   return (
     <React.Fragment>
       <button className="timer">Start Game</button>
@@ -34,7 +37,7 @@ const Timer = () => {
         {minutes === 0 && seconds === 0 ? (
           <h1> Times Up!</h1>
         ) : (
-          <h1>
+          <h1 className="timer-text">
             Time Remaining: {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
           </h1>
         )}
