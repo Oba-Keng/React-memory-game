@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 import Board from "../Cards/index";
 import Timer from "./Timer/presentation";
 import InitializeBoard from "../Board/index";
+import { GiNinjaHead } from "react-icons/gi";
+import { FcBiohazard } from "react-icons/fc";
+import { Md3DRotation } from "react-icons/md";
+import { GiBlindfold } from "react-icons/gi";
 
 const Game = props => {
   const [cards, setCards] = useState([]);
@@ -79,6 +83,10 @@ const Game = props => {
 
   return (
     <React.Fragment>
+      <FcBiohazard />
+      <GiBlindfold />
+      <GiNinjaHead />
+      <Md3DRotation />
       <Restart />
       <Timer />
       <Board
