@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { FcHighPriority } from "react-icons/fc";
+import { FcAlarmClock } from "react-icons/fc";
 
 const Timer = () => {
   const [seconds, setSeconds] = useState(0);
   const [minutes, setMinutes] = useState(2);
+  const [active, setActive] = useState(false);
 
   useEffect(() => {
     let myInterval = setInterval(() => {
@@ -26,26 +29,22 @@ const Timer = () => {
     };
   });
 
-  if (minutes > 1) {
-  }
-
   return (
     <React.Fragment>
-      <button className="timer">Start Game</button>
-
       <div>
         {minutes === 0 && seconds === 0 ? (
           <h1> Times Up!</h1>
         ) : (
           <h1 className="timer-text">
-            Time Remaining: {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
+            <FcAlarmClock /> Time Remaining {minutes}:
+            {seconds < 10 ? `0${seconds}` : seconds}
           </h1>
         )}
       </div>
-      <h3 class="text">
-        Warning: not to be<br></br> used by person's who <br></br> are
-        photosensetive!
-      </h3>
+      <h1 class="text">
+        <FcHighPriority /> Warning: not to be<br></br> used by person's who{" "}
+        <br></br> are photosensetive!
+      </h1>
     </React.Fragment>
   );
 };

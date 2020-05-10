@@ -3,9 +3,9 @@ import Board from "../Cards/index";
 import Timer from "./Timer/presentation";
 import InitializeBoard from "../Board/index";
 import { GiNinjaHead } from "react-icons/gi";
-import { FcBiohazard } from "react-icons/fc";
 import { Md3DRotation } from "react-icons/md";
 import { GiBlindfold } from "react-icons/gi";
+import { GiHolyOak } from "react-icons/gi";
 
 const Game = props => {
   const [cards, setCards] = useState([]);
@@ -78,16 +78,19 @@ const Game = props => {
   };
 
   const Restart = () => {
-    return <button className="timer">Play Again</button>;
+    return (
+      <button className="timer">
+        <h1>Restart</h1>
+      </button>
+    );
   };
 
   return (
     <React.Fragment>
-      <FcBiohazard />
+      <GiHolyOak />
       <GiBlindfold />
       <GiNinjaHead />
-      <Md3DRotation />
-      <Restart />
+      <Md3DRotation /> <Restart />
       <Timer />
       <Board
         dimension={dimension}
