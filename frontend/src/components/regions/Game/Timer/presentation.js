@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FcHighPriority } from "react-icons/fc";
 import { FcAlarmClock } from "react-icons/fc";
+import { FcExpired } from "react-icons/fc";
 
 const Timer = () => {
   const [seconds, setSeconds] = useState(0);
@@ -33,7 +34,10 @@ const Timer = () => {
     <React.Fragment>
       <div>
         {minutes === 0 && seconds === 0 ? (
-          <h1> Times Up!</h1>
+          <h1 className={"time-up-text"}>
+            {" "}
+            Times Up!! <FcExpired />
+          </h1>
         ) : (
           <h1 className="timer-text">
             <FcAlarmClock /> Time Remaining {minutes}:
@@ -41,9 +45,9 @@ const Timer = () => {
           </h1>
         )}
       </div>
-      <h1 class="text">
+      <h1 class="warning-text">
         <FcHighPriority /> Warning: not to be<br></br> used by person's who{" "}
-        <br></br> are photosensetive!
+        <br></br> are photosensetive!..
       </h1>
     </React.Fragment>
   );

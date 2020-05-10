@@ -112,11 +112,15 @@
   background-image: -webkit-linear-gradient(bottom, #589acc 0%, #5a96c7 100%);
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #589acc) color-stop(1, #5a96c7));
 }
-.text {
+.warning-text {
   color: blue;
   font-family: "Ceviche One", cursive;
 }
 .timer-text {
   font-family: "Ceviche One", cursive;
   color: green;
+}
+.time-up-text {
+  font-family: "Ceviche One", cursive;
+  color: red;
 }

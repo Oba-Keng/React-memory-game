@@ -7,11 +7,3 @@ test("renders learn react link", () => {
   const linkElement = getByText(/learn react/i);
   expect(linkElement).toBeInTheDocument();
 });
-
-test("create game", () => {
-  expect(props.Game()).toBeDefined();
-});
-
-// test("return array", () => {
-//   expect().teBe(jasmine)
-// })
