@@ -87,19 +87,21 @@ const Game = props => {
 
   return (
     <React.Fragment>
-      <GiHolyOak />
-      <GiBlindfold />
-      <GiNinjaHead />
-      <Md3DRotation /> <Restart />
-      <Timer />
-      <Board
-        dimension={dimension}
-        cards={cards}
-        flipped={flipped}
-        flipCard={flipCard}
-        disabled={disabled}
-        solved={solved}
-      />
+      <div data-testid="board">
+        <GiHolyOak />
+        <GiBlindfold />
+        <GiNinjaHead />
+        <Md3DRotation /> <Restart />
+        <Timer />
+        <Board
+          dimension={dimension}
+          cards={cards}
+          flipped={flipped}
+          flipCard={flipCard}
+          disabled={disabled}
+          solved={solved}
+        />
+      </div>
     </React.Fragment>
   );
 };
