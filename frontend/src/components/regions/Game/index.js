@@ -87,13 +87,14 @@ const Game = props => {
 
   return (
     <React.Fragment>
-      <div data-testid="board">
+      <div className="game-backdrop">
         <GiHolyOak />
         <GiBlindfold />
         <GiNinjaHead />
         <Md3DRotation /> <Restart />
         <Timer />
         <Board
+          data-testid="board"
           dimension={dimension}
           cards={cards}
           flipped={flipped}
